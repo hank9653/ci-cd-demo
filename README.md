@@ -1,27 +1,28 @@
 # Docker on Amazon ECS using AWS CloudFormation & CLI
 
-Devteds [Episode #9](https://devteds.com/episodes/9-docker-on-amazon-ecs-using-cloudformation)
-
-Create and run docker container on Amazon ECS using CloudFormation and CLI.
-
-- Containerize a simple REST API application
-- Use AWS CLI to create Amazon ECR repository
-- Build docker image and push to ECR
-- CloudFormation stack to create VPC, Subnets, InternetGateway etc
-- CloudFormation stack to create IAM role
-- CloudFormation stack to create ECS Cluster, Loadbalancer & Listener, Security groups etc
-- CloudFormation stack to deploy docker container
-
-[Episode video link](https://youtu.be/Gr2yTSsVSqg)
-
-[![Episode Video Link](https://i.ytimg.com/vi/Gr2yTSsVSqg/hqdefault.jpg)](https://youtu.be/Gr2yTSsVSqg)
-
-Visit https://devteds.com to watch all the episodes
-
 ## Step
 
+1. 修改 `./scripts/infra/web.yml` line 18
+```
+// 格式
+{aws_accountId}.dkr.ecr.{aws_default_region}.amazonaws.com/repo:latest
+
+// 例:
+013686061143.dkr.ecr.ap-northeast-1.amazonaws.com/repo:latest
+```
+
+2. 建立所需要的 infra
 ```
 $ sh ./scripts/create-infra.sh
+```
+
+3. 設定 Travis CI 環境變數 `AWS_ACCESS_KEY_ID` 和 `AWS_SECRET_ACCESS_KEY`
+
+4. 修改 `server.js` 的 `Hello World!` 為 `Demo`
+
+5. 當程式碼推到 GitHub 上時會觸發 Travis CI 進行 CI / CD 流程
+
+6. 結束記得刪除 infra
+```
 $ sh ./scripts/delete-infra.sh
-$ sh ./scripts/depoly-app.sh
 ```
