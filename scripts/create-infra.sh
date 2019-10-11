@@ -29,18 +29,18 @@ function docker_build_tag_push() {
 function vpc_create() {
     print_function_name
 
-    aws cloudformation create-stack --template-body file://./script/infra/vpc.yml --stack-name vpc
+    aws cloudformation create-stack --template-body file://./scripts/infra/vpc.yml --stack-name vpc
     aws cloudformation wait stack-create-complete --stack-name vpc
 }
 function iam_create() {
     print_function_name
 
-    aws cloudformation create-stack --template-body file://./script/infra/iam.yml --stack-name iam --capabilities CAPABILITY_IAM
+    aws cloudformation create-stack --template-body file://./scripts/infra/iam.yml --stack-name iam --capabilities CAPABILITY_IAM
 }
 function ecs_cluster_create() {
     print_function_name
 
-    aws cloudformation create-stack --template-body file://./script/infra/web-cluster.yml --stack-name web-cluster
+    aws cloudformation create-stack --template-body file://./scripts/infra/web-cluster.yml --stack-name web-cluster
     aws cloudformation wait stack-create-complete --stack-name web-cluster
 }
 
@@ -48,7 +48,7 @@ function ecs_service_create() {
     print_function_name
 
     # Edit the api.yml to update Image tag/URL under Task > ContainerDefinitions and,
-    aws cloudformation create-stack --template-body file://./script/infra/web.yml --stack-name web
+    aws cloudformation create-stack --template-body file://./scripts/infra/web.yml --stack-name web
     aws cloudformation wait stack-create-complete --stack-name web
 }
 

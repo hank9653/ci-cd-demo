@@ -21,7 +21,7 @@ Visit https://devteds.com to watch all the episodes
 ## Step
 
 ```
-$ sh ./script/create-infra.sh
-$ sh ./script/delete-infra.sh
-$ sh ./script/depoly-app.sh
+$ sh ./scripts/create-infra.sh
+$ sh ./scripts/delete-infra.sh
+$ sh ./scripts/depoly-app.sh
 ```
