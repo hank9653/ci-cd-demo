@@ -5,6 +5,7 @@
 - GitHub 帳號
 - Travis CI 帳號
 - AWS 帳號
+  - 需先裝好 aws cli
 
 ## Step
 
