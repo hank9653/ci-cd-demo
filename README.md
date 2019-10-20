@@ -1,5 +1,11 @@
 # Docker on Amazon ECS using AWS CloudFormation & CLI
 
+## 前置準備
+
+- GitHub 帳號
+- Travis CI 帳號
+- AWS 帳號
+
 ## Step
 
 1. 修改 `./scripts/infra/web.yml` line 18
