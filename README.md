@@ -36,4 +36,4 @@ $ sh ./scripts/delete-infra.sh
 
 ## CI/CD 架構圖
 
-![CI/CD 架構圖](https://ibb.co/yhZF7FN)
+![CI/CD 架構圖](https://drive.google.com/uc?export=view&id=1818yGRrzYMWxomZ5u6qG2Efomu5GBQME)
