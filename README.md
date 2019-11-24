@@ -33,3 +33,7 @@ $ sh ./scripts/create-infra.sh
 ```
 $ sh ./scripts/delete-infra.sh
 ```
+
+## CI/CD 架構圖
+
+![CI/CD 架構圖](https://ibb.co/yhZF7FN)
