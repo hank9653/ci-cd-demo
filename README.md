@@ -1,5 +1,9 @@
 # Docker on Amazon ECS using AWS CloudFormation & CLI
 
+## CI/CD 架構圖
+
+![CI/CD 架構圖](https://drive.google.com/uc?export=view&id=1818yGRrzYMWxomZ5u6qG2Efomu5GBQME)
+
 ## 前置準備
 
 - GitHub 帳號
@@ -33,7 +37,3 @@ $ sh ./scripts/create-infra.sh
 ```
 $ sh ./scripts/delete-infra.sh
 ```
-
-## CI/CD 架構圖
-
-![CI/CD 架構圖](https://drive.google.com/uc?export=view&id=1818yGRrzYMWxomZ5u6qG2Efomu5GBQME)
